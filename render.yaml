@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: census-app
+    env: node
+    buildCommand: npm install
+    startCommand: node src/app.js
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: DB_HOST
+        value: your-aiven-host
+      - key: DB_USER
+        value: your-aiven-user
+      - key: DB_PASSWORD
+        value: your-aiven-password
+      - key: DB_NAME
+        value: census_db
